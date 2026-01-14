@@ -1,0 +1,1441 @@
+.MainDiv{
+  box-sizing: border-box;
+  max-width :auto;
+  margin: auto;
+}
+
+/* Booking Confirmation Page Styles */
+.booking-detail-section {
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+.location-item {
+  background: white;
+  border: 1px solid #e9ecef;
+  border-radius: 6px;
+  padding: 12px;
+  margin-bottom: 10px;
+}
+
+.location-value {
+  font-size: 16px;
+  color: #495057;
+  margin-top: 5px;
+  padding: 8px;
+  background: #f8f9fa;
+  border-radius: 4px;
+  border-left: 4px solid #28a745;
+}
+
+.confirmdata {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Local Booking Page Styles */
+.booking-summary {
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.info-item {
+  margin-bottom: 10px;
+  padding: 8px;
+  background: white;
+  border-radius: 4px;
+  border-left: 4px solid #007bff;
+}
+
+.info-item strong {
+  color: #495057;
+}
+
+.info-item span {
+  color: #6c757d;
+}
+
+/* Location Selection Pages */
+.location-category {
+  margin-bottom: 20px;
+}
+
+.location-category h6 {
+  color: #6c757d;
+  border-bottom: 2px solid #e9ecef;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
+
+.location-btn {
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+.location-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.location-btn.active {
+  background-color: #007bff;
+  border-color: #007bff;
+  color: white;
+}
+
+/* Form Validation Styles */
+.form-control.is-valid {
+  border-color: #28a745;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath fill='%2328a745' d='m2.3 6.73.94-.94 1.76 1.76 3.52-3.52.94.94-4.46 4.46z'/%3e%3c/svg%3e");
+}
+
+.form-control.is-invalid {
+  border-color: #dc3545;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%23dc3545' viewBox='0 0 12 12'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath d='m5.8 4.6 1.4 1.4 1.4-1.4'/%3e%3c/svg%3e");
+}
+
+/* Loading States */
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.fa-spinner {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.logoimg{
+  margin-top: 10px;
+  width: 60px;
+  height: 60px;
+}
+
+.cartarvels{
+  padding-left: 20px;
+  font-size: 50px;
+  font-weight: 600;
+  font-family:cursive;
+}
+
+.carouselImg{
+  width: 100%;
+  height: 600px;
+  opacity: 0.9;
+}
+
+.homepage-second-main{
+  background-image: linear-gradient(to left,rgba(236, 241, 241, 0.637),rgb(147, 223, 204));
+  padding: 70px 0px 140px 0px;
+}
+
+.homepage-car-img-div{
+  display: flex;
+  position: relative;
+  width:47%;
+}
+
+.homepage-main-content-div{
+  display: flex;
+  height: 300px;
+}
+
+.homepage-car-main-img{
+  width: 650px;
+  height: 400px;
+}
+
+.home-main-heading{
+  position: absolute;
+  top: 10%;
+  left:10%;
+  font-size: 58px;
+  font-family:cursive;
+  font-weight:bolder;
+  color: rgb(17, 83, 55);
+  line-height: 1.5;
+}
+
+.tourpackage,.Gallery{
+   font-family:Georgia, 'Times New Roman', Times, serif;
+   padding-top: 10px;
+   font-size: 40px;
+}
+
+.tourpackage_inline{
+  margin-left: auto;
+}
+.gall_list_padding{
+  padding: 40px;
+  padding-top: 0px;
+}
+.card_main_div{
+  max-width: 95%;
+  margin: 0% 5% 3% 3%;
+}
+
+.Card_Gallery{
+  /* width: 345px; */
+  font-size: 15px;
+}
+.Card_Gallery1{
+  /* width: 345px; */
+  font-size: 15px;
+}
+
+
+.card-text{
+  line-height: 1.6em !important ;
+  margin: 5px;
+}
+
+/* ========================================
+   MODERN FOOTER STYLES
+   ======================================== */
+
+.footer {
+    background: linear-gradient(135deg, #1e293b 0%, #334155 50%, #475569 100%);
+    color: #e2e8f0;
+    padding: 4rem 0 2rem;
+    margin-top: 4rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #3b82f6, #06b6d4, #10b981, #f59e0b);
+}
+
+.footer .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.footer .box-container .box {
+    position: relative;
+}
+
+.footer .box-container .box h3 {
+    color: #ffffff;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    position: relative;
+    padding-bottom: 0.75rem;
+}
+
+.footer .box-container .box h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background: linear-gradient(90deg, #3b82f6, #06b6d4);
+    border-radius: 2px;
+}
+
+.footer .box-container .box a {
+    color: #cbd5e1;
+    font-size: 0.95rem;
+    padding: 0.5rem 0;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+    margin: 0.25rem 0;
+}
+
+.footer .box-container .box a:hover {
+    color: #3b82f6;
+    padding-left: 0.75rem;
+    background: rgba(59, 130, 246, 0.1);
+}
+
+.footer .box-container .box a i {
+    color: #3b82f6;
+    margin-right: 0.75rem;
+    width: 16px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.footer .box-container .box a:hover i {
+    color: #06b6d4;
+    transform: scale(1.1);
+}
+
+/* Footer Brand Section */
+.footer .box-container .box:first-child h3 {
+    font-size: 1.5rem;
+    background: linear-gradient(135deg, #3b82f6, #06b6d4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 1rem;
+}
+
+.footer .box-container .box:first-child p {
+    color: #94a3b8;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+/* Social Media Icons */
+.footer .social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.footer .social-links a {
+    width: 40px;
+    height: 40px;
+    background: rgba(59, 130, 246, 0.1);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    padding: 0;
+}
+
+.footer .social-links a:hover {
+    background: #3b82f6;
+    border-color: #3b82f6;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.footer .social-links a i {
+    margin: 0;
+    color: #3b82f6;
+    transition: color 0.3s ease;
+}
+
+.footer .social-links a:hover i {
+    color: #ffffff;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    border-top: 1px solid rgba(148, 163, 184, 0.2);
+    margin-top: 3rem;
+    padding-top: 2rem;
+    text-align: center;
+    color: #94a3b8;
+    font-size: 0.9rem;
+}
+
+.footer-bottom p {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.footer-bottom .heart {
+    color: #ef4444;
+    animation: heartbeat 1.5s ease-in-out infinite;
+}
+
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+/* Contact Info */
+.footer .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.footer .contact-info .contact-item {
+    display: flex;
+    align-items: center;
+    color: #cbd5e1;
+    font-size: 0.9rem;
+}
+
+.footer .contact-info .contact-item i {
+    color: #3b82f6;
+    margin-right: 0.75rem;
+    width: 16px;
+}
+
+/* Newsletter Signup */
+.footer .newsletter {
+    background: rgba(59, 130, 246, 0.1);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-top: 1rem;
+}
+
+.footer .newsletter h4 {
+    color: #ffffff;
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+}
+
+.footer .newsletter p {
+    color: #94a3b8;
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+}
+
+.footer .newsletter-input {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.footer .newsletter-input input {
+    flex: 1;
+    padding: 0.75rem;
+    border: 1px solid rgba(148, 163, 184, 0.3);
+    border-radius: 6px;
+    background: rgba(30, 41, 59, 0.5);
+    color: #e2e8f0;
+    font-size: 0.9rem;
+}
+
+.footer .newsletter-input input::placeholder {
+    color: #94a3b8;
+}
+
+.footer .newsletter-input input:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.footer .newsletter-input button {
+    padding: 0.75rem 1.5rem;
+    background: linear-gradient(135deg, #3b82f6, #06b6d4);
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.footer .newsletter-input button:hover {
+    background: linear-gradient(135deg, #2563eb, #0891b2);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer {
+        padding: 3rem 0 2rem;
+    }
+    
+    .footer .box-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 0 1rem;
+    }
+    
+    .footer .newsletter-input {
+        flex-direction: column;
+    }
+    
+    .footer .social-links {
+        justify-content: center;
+    }
+}
+
+
+
+.linkcolor{
+  color: aliceblue;
+}
+
+.Card_Gallery_pic{
+  cursor: pointer;
+}
+.card-text{
+  line-height: 1.5;
+}
+
+.Card_Gallery_pic :hover{
+  transition: width 0.5s, height 0.5s;
+  width: 355px;
+  height: 220px;
+}
+
+.Gallery-slider{
+  width: 100%;
+  margin: auto auto 50px 40px;
+}
+
+.Gallery-slider img{
+  padding: 13px;
+  width: 24%;
+  height: 280px;
+}
+
+.Gallery{
+  margin: 10px auto 20px 40px;
+}
+
+/* ----------------------------------------------- */
+
+.loginpage,
+.signuppage{
+  width: 45%;
+  margin: auto;
+  background-color: rgb(244, 245, 245);
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 5px 7px rgb(212, 212, 212);
+}
+
+.user_login_top,
+.user_signup_top{
+  width: auto;
+  height: 50px;
+  border-radius: 10px 10px 0px 0px;
+  background-image: linear-gradient(to right ,rgba(110, 75, 236, 0.568),rgb(118, 45, 255)); 
+  /* background-image: linear-gradient(to right ,rgba(19, 67, 131, 0.568),rgb(21, 52, 134)); */
+}
+.user_login,
+.user_signup{
+  font-size: 30px;
+  font-weight: 700;
+  font-family:initial;
+  color: rgb(66, 21, 117);
+
+}
+.user_signup{
+  color: rgb(32, 35, 90);
+
+}
+.user_signup_top{
+  background-image: linear-gradient(to right ,rgba(19, 67, 131, 0.568),rgb(21, 52, 134));
+}
+
+.form-control:focus{
+  box-shadow: none !important;
+}
+
+form{
+  padding: 0px 40px;
+}
+
+.signup-button,
+.login-button,
+.signup-login-button,
+.login-signup-button{
+  width: 230px !important;
+  border: 0px;
+  border-radius: 15px 50px !important;
+  padding: 5px;
+  color: white;
+  font-size: 20px;
+  box-shadow: 2px 2px rgb(189, 189, 189) !important;
+  background-image: linear-gradient(to right ,rgba(175, 145, 229, 0.568),rgb(118, 45, 255)); 
+
+  /* background-image: linear-gradient(to right ,rgba(110, 75, 236, 0.568),rgb(118, 45, 255));  */
+  /* background-image: linear-gradient(to right ,rgba(24, 91, 167, 0.568),rgb(38, 72, 165)) ; */
+}
+.signup-login-button{
+  font-size: 15px;
+  width: 180px;
+  background-image: linear-gradient(to right ,rgba(24, 91, 167, 0.568),rgb(38, 72, 165)) ;
+
+}
+
+.signup-button{
+  background-image: linear-gradient(to right ,rgba(24, 91, 167, 0.568),rgb(38, 72, 165)) ;
+
+}
+
+.login-signup-button{
+  background-image: linear-gradient(to right ,rgba(175, 145, 229, 0.568),rgb(118, 45, 255)); 
+
+}
+/* ---------------------------------------------------------------------- */
+.pack{
+  width: 75%;
+  margin: auto;
+}
+
+.pack :nth-child(1) :hover{
+  background-image: linear-gradient(to right,rgba(253, 253, 253, 0),rgb(162, 235, 229));
+  width: 40%;
+  transition: 0.2s;
+}
+.pack :nth-child(2) :hover{
+  background-image: linear-gradient(to left,rgba(253, 253, 253, 0),rgb(162, 235, 229));
+  width: 40%;
+  transition: 0.2s;
+}
+
+.tour-package-div,
+.local-package-div{
+  position: relative;
+  display: inline-block;
+  width:38%;
+  height: 300px;
+  padding: 10px;
+  margin: 7% 5%;
+  border-radius: 15px;
+  box-shadow: 10px 10px 10px 10px rgb(196, 202, 202);
+}
+
+
+.tour-span{
+  position: absolute;
+  top: 25%;
+  left:28%;
+  font-size: 40px;
+  color: rgb(23, 103, 117);
+  border-radius: 15px;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  
+}
+.package{
+  background-image: linear-gradient(to right,rgba(225, 235, 234, 0.486),rgb(202, 240, 231));
+}
+
+
+
+/* --------------------------------------------------------------------- */
+.new-booking-body{
+   /* width: 100%;  */
+  background-image: linear-gradient(to right,rgba(236, 241, 241, 0.637),rgb(94, 225, 248));
+  padding: 50px 0px 110px 0px;
+  /* margin: auto; */
+}
+
+.car-img-div{
+  display: flex;
+  position: relative;
+  width:47%;
+}
+
+.main-content-div{
+  display: flex;
+  height: 340px;
+}
+
+.car-main-img{
+  width: 650px;
+  height: 400px;
+}
+
+.main-heading{
+  position: absolute;
+  top: 10%;
+  left:10%;
+  font-size: 58px;
+  font-family:'Times New Roman', Times, serif;
+  font-weight:bolder;
+  color: rgb(17, 76, 83);
+  line-height: 1.5;
+}
+
+.form-bg{
+  background-color: rgb(247, 245, 241);
+  background-image: url("https://png.pngtree.com/thumb_back/fh260/background/20191029/pngtree-white-acrylic-brush-background-image_320177.jpg");
+  padding: 30px;
+}
+.form-align{
+  padding: 30px;
+}
+.newbooking-loginpage{
+  width: 40%;
+  margin: auto;
+  background-color: rgb(243, 243, 243);
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 5px 7px rgb(212, 212, 212);
+}
+
+.change-bg{
+  background-color: rgb(246, 248, 250);
+}
+
+.newbooking-user_login_top{
+  width: auto;
+  height: 50px;
+  border-radius: 10px 10px 0px 0px;
+  background-image: linear-gradient(to right ,rgba(82, 177, 214, 0.568),rgb(22, 154, 206));
+}
+
+.change-color{
+  background-image: linear-gradient(to right ,rgb(26, 29, 180),rgb(25, 22, 206));
+  height: 60px;
+}
+.newbooking-user_login{
+  font-size: 30px;
+  font-weight: 700;
+  font-family:initial;
+  color: rgb(30, 79, 124);
+}
+.change-font-size{
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px 20px;
+  color: rgb(41, 14, 165);
+}
+.newbooking-form{
+  padding: 0px 50px;
+}
+
+.btn-color{
+  background-color: rgb(25, 25, 202) !important;
+}
+
+.title-font{
+  font-size: 22px;
+  font-weight: 600;
+  font-family:Arial, Helvetica, sans-serif;
+  color: rgb(27, 124, 96);
+}
+
+/* .popular-image-kovai{
+  background-image: linear-gradient(to left,rgba(248, 254, 255, 0.507),rgb(238, 246, 248));
+} */
+
+.poupular-places{
+  width: 100%;
+  font-size: 40px;
+  margin-top: 10px;
+  font-weight: bold;
+  color: rgb(1, 54, 54);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.love-kovai{
+  opacity: 0.9;
+}
+/* .localtourCard { */
+  /* margin: 10px; */
+  /* padding: 10px; */
+/* }  */
+.localtourCard img{
+  /* margin: 10px; */
+  width: 343px;
+  height: 200px;
+}
+/* --------------------------------------------------------------------------- */
+
+
+.opacity-decide-1{
+  opacity: 0.6;
+}
+
+.img-data{
+  position: absolute;
+  margin: 30px;
+  padding: 50px 100px;
+}
+.img-data h1{
+  font-size: 60px;
+  font-weight: bold;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: rgb(4, 70, 32);
+}
+.img-data p{
+  font-size: 23px;
+  color: rgb(255, 255, 255);
+}
+.img-data button{
+  margin-top: 15px;
+  font-size: 20px;
+  padding: 10px;
+  color: rgb(42, 117, 73);
+  border-radius: 5px;
+  border: 1px solid white;
+  background-image: linear-gradient(to left,rgba(229, 238, 240, 0.507),rgb(186, 240, 204));
+}
+
+.icon-tour{
+  padding: 7px;
+}
+
+/* ---------------------------------------------------------------- */
+
+
+.confirmbooking-loginpage{
+  width: 40%;
+  margin: 40px auto;
+  background-color: rgb(247, 247, 247);
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 5px 7px 10px 10px rgb(212, 212, 212);
+}
+
+.confirmbooking-user_login_top{
+  text-align: center;
+  width: auto;
+  padding: 10px;
+  height: 70px;
+  border-radius: 10px 10px 0px 0px;
+  background-image: linear-gradient(to right ,rgba(20, 206, 82, 0.568),rgb(11, 168, 76));
+}
+.confirmbooking-user_login{
+  font-size: 30px;
+  font-weight: 700;
+  font-family:initial;
+  color: rgb(4, 80, 29);
+}
+
+.confirmbooking-form{
+  padding: 0px 50px;
+}
+
+.confirmdata{
+  margin: 20px;
+  line-height: 0.6;
+}
+
+/* .confirmfooter {
+  background-color: rgb(204, 204, 204);
+  position : absolute;
+  bottom : 0;
+  padding: 20px;
+  width: 100%;
+} */
+
+/* ------------------------------------------------------------------------------- */
+.thankyou{
+  background-image: url("https://wallpaperaccess.com/full/817605.jpg");
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  padding: 50px;
+  padding-bottom: 100px;
+
+}
+
+.thankyou h1{
+  color: rgb(41, 197, 80);
+  font-size: 60px;
+  font-weight: bold;
+}
+.thankyou i{
+  color: rgb(66, 158, 66);
+}
+.thankyou p{
+  font-size: 20px;
+}
+.thankyou h2{
+  color: rgb(21, 88, 133);
+  font-size: 40px;
+  font-weight: bold;
+}
+
+/* ----------------------------------------- */
+
+.bookinglist{
+  width: 100%;
+  font-size: 30px;
+  padding: 20px;
+  margin: 0px;
+  /* text-align: center; */
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: rgb(97, 96, 96);
+  background-color: rgb(222, 231, 231);
+}
+
+.main_carkmdetail{
+  background-image:linear-gradient(to right, rgb(255, 255, 255), rgb(231, 240, 239));
+}
+.carkm_ptag{
+  text-align: center;
+  font-size: 35px;
+  font-family: cursive;
+  padding: 20px;
+  color: rgb(37, 83, 85);
+}
+.carkmdetail{
+  width: 65%;
+  margin: auto;
+  font-weight: 600;
+}
+
+.main_carkmdetail table{
+ color: rgb(25, 126, 14);
+ background-color: rgb(240, 247, 247);
+ box-shadow: 5px 5px 5px 5px rgb(177, 177, 177);
+}
+
+.alignbutton{
+  display: flex;
+ }
+
+ .chart{
+   margin-bottom: 20px;
+ }
+
+ /* .CarImageMain{
+  background-color: rgb(243, 239, 239);
+ } */
+
+ .carimage{
+   margin-bottom: 15px;
+   box-shadow: 5px 5px 5px 5px rgb(233, 238, 238);
+ }
+ .carimage :hover{
+   width: 103%;
+   transition: width 0.6s;
+
+ }
+ .availabecars{
+   text-align: center;
+   width: 100%;
+   padding: 10px;
+   font-size: 40px;
+   font-weight:bold;
+   font-family: 'Times New Roman', Times, serif;
+   color: rgb(32, 87, 68);
+ }
+
+ .cardpackage{
+   margin: 70px 0px;
+ }
+
+ .packagecardbody{
+   background-image: linear-gradient(to left,rgb(178, 236, 236),rgb(255, 255, 255));
+ }
+
+ .packagecardbody :hover{
+      background-color: rgb(16, 103, 109) !important;
+      padding: 20px;
+      transition: 0.7s;
+ }
+
+ .packagecardbody{
+  background-color: rgb(61, 178, 182) !important;
+ }
+ 
+ .packagecardheader{
+  background-color:	rgb(48, 122, 131)!important;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: cursive;
+ }
+
+ .packagecolor{
+  background-image: linear-gradient(to right,rgb(205, 241, 241),rgba(207, 243, 243, 0.61));
+ }
+
+/* ---------------------------------------------------------- */
+/* ***********************MEDIA QUERY***************** */
+
+@media only screen and (max-width: 1220px){
+  .homepage-second-main{
+    padding: 50px 0px 100px 0px;
+  }
+  .homepage-car-img-div{
+    width:45%;
+  }
+  .homepage-car-main-img{
+    width: 450px;
+    height: 350px;
+  }
+  .home-main-heading{
+    font-size: 50px;
+  }
+
+  .Gallery-slider{
+    margin: auto auto 50px 10px;
+  }
+  
+  .Gallery-slider img{
+    padding: 5px;
+    width: 23%;
+    height: 250px;
+  }
+  .card_main_div{
+    max-width: 100%;
+  }
+  .Card_Gallery{
+    /* width: 30%; */
+    font-size: 17px;
+  }
+  .Card_Gallery1{
+    font-size: 17px;
+    /* width: 30%; */
+  }
+  .new-booking-body{
+    padding: 0px 0px 0px 0px;
+  }
+
+  .car-img-div{
+    width:100%;
+  }
+  .main-content-div{
+    height: 450px;
+  }
+  .car-main-img{
+    padding-top: 70px;
+    padding-left: 20%;
+    width: 85%;
+    height: 500px;
+  }
+  .main-heading{
+    position: absolute;
+    left:10%;
+    padding-top: 30px;
+    font-size: 50px;
+    line-height: 1.2;
+  }
+  .newbooking-loginpage{
+    width: 70%;
+  }
+  .title-font{
+    padding-top: 10px;
+    font-size: 20px;
+  }
+  .poupular-places{
+    width: 100%;
+    font-size: 35px;
+    margin: 3% auto 3% 5%;
+  }
+  .localtourCard img{
+    width: 350px;
+    height: 250px;
+  }
+  .carkmdetail{
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 900px){
+  
+  .homepage-second-main{
+    padding: 50px 0px 50px 0px;
+  }
+  .homepage-car-img-div{
+    width:35%;
+  }
+  .homepage-car-main-img{
+    width: 450px;
+    height: 280px;
+  }
+  .home-main-heading{
+    font-size: 38px;
+  }
+
+  .pack{
+    width: 70%;
+  }
+  
+  .tour-package-div,
+  .local-package-div{
+    height: 200px;
+    padding: 30px;
+    margin: 15% 5%;
+  }
+  
+  .tour-span{
+    top: 15%;
+    left:15%;
+    font-size: 35px;    
+  }
+  .Card_Gallery{
+    /* width: 70%; */
+    font-size: 18px;
+  }
+  .Card_Gallery1{
+    /* width: 70%; */
+    font-size: 18px;
+  }
+  
+  .card-text{
+    line-height: 1.5em !important ;
+    margin: 0px;
+  }
+
+  .card_main_div{
+    width: 100%;
+    margin: 0%;
+  }
+  .localtourCard{
+    padding-right: 20px;
+  }
+  .localtourCard img{
+    width: 350px;
+    /* margin-left:20%; */
+    height: 250px;
+  }
+  .carkmdetail{
+    width: 100%;
+  }
+  .confirmbooking-loginpage{
+    width: 60%;
+  }
+}
+
+@media only screen and (max-width: 768px){
+  .carouselImg{
+    height: 350px;
+  }
+  .homepage-second-main{
+    padding: 50px 0px 0px 30px;
+  }
+  .homepage-car-img-div{
+    width:50%;
+  }
+  .homepage-main-content-div{
+    height: 250px;
+  }
+  .homepage-car-main-img{
+    width: 200px;
+    height: 220px;
+  }
+  .home-main-heading{
+    font-size: 30px;
+  }
+
+  .pack{
+    width: 70%;
+  }
+  
+  .tour-package-div,
+  .local-package-div{
+    height: 150px;
+    padding: 30px;
+    margin: 15% 5%;
+  }
+  
+  .tour-span{
+    top: 15%;
+    left:10%;
+    font-size: 28px;    
+  }
+
+  .Gallery-slider{
+    margin: auto auto 50px 10px;
+  }
+  
+  .Gallery-slider img{
+    padding: 5px;
+    width: 50%;
+    height: 250px;
+  }
+  .card_main_div{
+    width: 100%;
+  }  
+
+  .Card_Gallery{
+    font-size: 15px;
+  }
+  .Card_Gallery1{
+    font-size: 14px;
+  }
+  .cardtitle{
+    font-size: 16px !important;
+  }
+  .card-text{
+    line-height: 1.4em !important ;
+    margin: 0px;
+  }
+  .loginpage,
+  .signuppage{
+   width: 70%;
+  }
+  .img-data{
+    margin: 30px;
+    padding: 30px 0px 30px 30px;
+  }
+  
+  .img-data h1{
+    font-size: 45px;
+  }
+  
+  .img-data p{
+    font-size: 20px;
+  }
+  
+  .img-data button{
+    margin-top: 35px;
+    font-size: 20px;
+    padding: 15px;
+  }
+  .new-booking-body{
+    padding: 0px 0px 0px 0px;
+  }
+  .car-img-div{
+    width:100%;
+  }
+  .main-content-div{
+    height: 400px;
+  }
+  .car-main-img{
+    padding-top: 70px;
+    padding-left: 15%;
+    width: 90%;
+    height: 400px;
+  }
+  .main-heading{
+    position: absolute;
+    left:10%;
+    padding-top: 30px;
+    font-size: 40px;
+    line-height: 1.2;
+  }
+  .newbooking-loginpage{
+    width: 80%;
+  }
+  .title-font{
+    padding-top: 10px;
+    font-size: 20px;
+  }
+  .poupular-places{
+    width: 100%;
+    font-size: 35px;
+    margin: 3% auto 3% 5%;
+  }
+  .localtourCard {
+    margin: 0%;
+    /* padding: 10px;  */
+  } 
+  .localtourCard img{
+    /* margin: 10px; */
+    width: 90%;
+    height: 200px;
+  }
+  .carkmdetail{
+    width: 100%;
+  }
+  .cardpackage{
+    margin: 20px 0px;
+  }
+  .tourpackage_inline{
+    margin-left: none;
+      width: 400px;
+  }
+  .tourpackage,.Gallery{
+    padding-top: 10px;
+    font-size: 20px;
+ }
+ .confirmbooking-loginpage{
+  width: 80%;
+}
+.bookinglist{
+  padding: 0% !important;
+  margin: 0% !important;
+}
+.heading-book{
+  font-size: 25px;
+  text-align: center;
+  padding: 5px 0% !important;
+}
+
+}
+
+@media only screen and (max-width: 480px){
+  .logoimg{
+    margin-top: 5px;
+    width: 35px;
+    height: 35px;
+  }
+  .homepage-second-main{
+    padding: 40px 0px 0px 30px;
+  }
+  .homepage-car-img-div{
+    width:55%;
+  }
+  .homepage-main-content-div{
+    height: 200px;
+  }
+  .homepage-car-main-img{
+    width: 130px;
+    height: 150px;
+  }
+  .home-main-heading{
+    font-size: 20px;
+  }
+
+  .cartarvels{
+    font-size: 30px;
+  }
+  
+  .carouselImg{
+    height: 350px;
+  }
+
+  .pack{
+    width: 90%;
+  }
+  
+  .tour-package-div,
+  .local-package-div{
+    height: 100px;
+    padding: 30px;
+    margin: 15% 5%;
+  }
+  .tour-span{
+    top: 15%;
+    left:10%;
+    font-size: 20px;    
+  }
+
+  .tourpackage,.Gallery{
+    font-size: 20px;
+ }
+
+ .tourpackage_inline{
+  margin-left: none;
+}
+.gall_list_padding{
+  padding: 10px;
+}
+ .Card_Gallery{
+   font-size: 15px;
+   /* width: 100%; */
+ }
+ .Card_Gallery1{
+  font-size: 15px;
+  /* width: 100%; */
+}
+
+ .card-text{
+   line-height: 1.4em !important ;
+ }
+ 
+ .Gallery-slider{
+   margin: auto auto 50px 10px;
+ }
+ 
+ .Gallery-slider img{
+   padding: 10px;
+   width: 170px;
+   height: 150px;
+ }
+ 
+ .Gallery{
+   margin: 0px auto 20px 20px;
+ }
+  
+.loginpage,
+.signuppage{
+  width: 95%;
+}
+
+.opacity-decide-1{
+  height: 350px;
+}
+
+.img-data{
+  margin: 10px;
+  padding: 30px 0px 30px 30px;
+}
+
+.img-data h1{
+  font-size: 35px;
+}
+
+.img-data p{
+  font-size: 17px;
+}
+
+.img-data button{
+  margin-top: 35px;
+  font-size: 15px;
+  padding: 10px;
+}
+.confirmbooking-loginpage{
+  width: 100%;
+ }
+ .new-booking-body{
+  padding: 0px 0px 0px 0px;
+}
+.car-img-div{
+  width:100%;
+}
+.main-content-div{
+  height: 300px;
+}
+.car-main-img{
+  padding-top: 80px;
+  padding-left: 30px;
+  width: 350px;
+  height: 300px;
+}
+
+.main-heading{
+  position: absolute;
+  left:10%;
+  padding-top: 30px;
+  font-size: 25px;
+  line-height: 1.2;
+}
+
+.newbooking-loginpage{
+  width: 100%;
+}
+
+.title-font{
+  padding-top: 10px;
+  font-size: 20px;
+}
+
+.poupular-places{
+  width: 100%;
+  font-size: 20px;
+  margin: 5% auto auto 5%;
+}
+/* .localtourCard img{
+  margin: 0%;
+  width: 160px;
+  height: 150px;
+} */
+.localtourCard img{
+  margin-left: 5%;
+  width: 100%;
+  height: 150px;
+}
+.carkmdetail{
+  width: 100%;
+}
+.carkm_ptag{
+  font-size: 20px;
+  padding: 10px 10px 0px 10px ;
+}
+.cardpackage{
+  margin: 10px 0px;
+}
+
+.heading-book{
+  font-size: 20px;
+  padding: 0% !important;
+  padding-top: 5px !important;
+}
+
+}

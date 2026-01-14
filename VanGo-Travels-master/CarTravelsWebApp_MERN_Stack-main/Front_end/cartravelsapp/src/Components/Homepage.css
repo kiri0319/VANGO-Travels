@@ -1,0 +1,1455 @@
+/* Modern Car Travels Homepage Styles */
+:root {
+  --primary-color: #2563eb;
+  --secondary-color: #1e40af;
+  --accent-color: #f59e0b;
+  --success-color: #10b981;
+  --warning-color: #f59e0b;
+  --danger-color: #ef4444;
+  --dark-color: #1f2937;
+  --light-color: #f8fafc;
+  --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  --gradient-accent: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  --gradient-success: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+  --shadow-soft: 0 10px 25px rgba(0, 0, 0, 0.1);
+  --shadow-medium: 0 20px 40px rgba(0, 0, 0, 0.15);
+  --shadow-strong: 0 30px 60px rgba(0, 0, 0, 0.2);
+}
+
+/* Global Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: calc(200px + 100%) 0;
+  }
+}
+
+@keyframes slideInFromTop {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Main Container */
+.modern-homepage {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.modern-homepage::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+  opacity: 0.3;
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Hero Carousel Section */
+.hero-carousel {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero-carousel .carousel-item {
+  height: 100vh;
+  position: relative;
+}
+
+.hero-carousel .carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.7);
+  transition: all 0.5s ease;
+}
+
+.hero-carousel .carousel-item:hover img {
+  filter: brightness(0.8);
+  transform: scale(1.05);
+}
+
+.hero-carousel .carousel-caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 10;
+  animation: fadeInUp 1s ease-out;
+}
+
+.hero-carousel .carousel-caption h3 {
+  font-size: 4rem;
+  font-weight: 700;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin-bottom: 1rem;
+  animation: pulse 2s infinite;
+}
+
+.hero-carousel .carousel-caption p {
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Floating Action Buttons */
+.floating-buttons {
+  position: fixed;
+  top: 50%;
+  right: 2rem;
+  transform: translateY(-50%);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.floating-btn {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--gradient-primary);
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-soft);
+  animation: float 3s ease-in-out infinite;
+}
+
+.floating-btn:hover {
+  transform: scale(1.1);
+  box-shadow: var(--shadow-medium);
+}
+
+.floating-btn:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+.floating-btn:nth-child(3) {
+  animation-delay: 1s;
+}
+
+/* Main Content Section */
+.main-content-section {
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  padding: 5rem 0;
+  position: relative;
+}
+
+.main-content-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);
+}
+
+.content-wrapper {
+  display: flex;
+  align-items: center;
+  min-height: 500px;
+  position: relative;
+  z-index: 2;
+}
+
+.content-image {
+  flex: 1;
+  position: relative;
+  animation: fadeInLeft 1s ease-out;
+}
+
+.content-image img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: var(--shadow-medium);
+  transition: all 0.3s ease;
+}
+
+.content-image img:hover {
+  transform: scale(1.05);
+  box-shadow: var(--shadow-strong);
+}
+
+.content-text {
+  flex: 1;
+  padding: 2rem;
+  animation: fadeInRight 1s ease-out;
+}
+
+.content-text h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.content-text p {
+  font-size: 1.2rem;
+  color: var(--dark-color);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+/* Package Selection Section */
+.package-selection {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 5rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.package-selection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="2" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23dots)"/></svg>');
+  animation: float 8s ease-in-out infinite;
+}
+
+.package-container {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.package-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.package-card {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: var(--shadow-soft);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  animation: fadeInUp 1s ease-out;
+}
+
+.package-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  transition: left 0.5s;
+}
+
+.package-card:hover::before {
+  left: 100%;
+}
+
+.package-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-strong);
+}
+
+.package-card h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--dark-color);
+  margin-bottom: 1rem;
+}
+
+.package-card p {
+  color: #6b7280;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.package-btn {
+  background: var(--gradient-primary);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.package-btn:hover {
+  transform: scale(1.05);
+  box-shadow: var(--shadow-medium);
+  color: white;
+  text-decoration: none;
+}
+
+/* Popular Packages Section */
+.popular-packages {
+  background: var(--light-color);
+  padding: 5rem 0;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 3rem;
+  animation: fadeInUp 1s ease-out;
+}
+
+.section-title h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1rem;
+}
+
+.section-title p {
+  font-size: 1.2rem;
+  color: #6b7280;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.packages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.package-item {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  transition: all 0.3s ease;
+  animation: fadeInUp 1s ease-out;
+}
+
+.package-item:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-strong);
+}
+
+.package-item img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+.package-item:hover img {
+  transform: scale(1.1);
+}
+
+.package-content {
+  padding: 1.5rem;
+}
+
+.package-content h4 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--dark-color);
+  margin-bottom: 0.5rem;
+}
+
+.package-content p {
+  color: #6b7280;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.package-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.package-meta span {
+  background: var(--gradient-accent);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.package-price {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--success-color);
+}
+
+/* Gallery Section */
+.gallery-section {
+  background: linear-gradient(135deg, #1f2937 0%, #374151 100%);
+  padding: 5rem 0;
+  position: relative;
+}
+
+.gallery-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="white" stroke-width="0.5" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+}
+
+.gallery-title {
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+  z-index: 2;
+  animation: fadeInUp 1s ease-out;
+}
+
+.gallery-title h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.gallery-title p {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.gallery-carousel {
+  position: relative;
+  z-index: 2;
+}
+
+.gallery-slider {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding: 1rem 0;
+  scroll-behavior: smooth;
+}
+
+.gallery-slider::-webkit-scrollbar {
+  height: 8px;
+}
+
+.gallery-slider::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+.gallery-slider::-webkit-scrollbar-thumb {
+  background: var(--gradient-primary);
+  border-radius: 4px;
+}
+
+.gallery-slider img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.gallery-slider img:hover {
+  transform: scale(1.05);
+  box-shadow: var(--shadow-medium);
+}
+
+/* Loading Animation */
+.loading-shimmer {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200px 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-carousel .carousel-caption h3 {
+    font-size: 2.5rem;
+  }
+  
+  .content-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .content-text h2 {
+    font-size: 2rem;
+  }
+  
+  .package-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .packages-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .floating-buttons {
+    display: none;
+  }
+  
+  .gallery-slider img {
+    width: 250px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-carousel .carousel-caption h3 {
+    font-size: 2rem;
+  }
+  
+  .content-text h2 {
+    font-size: 1.8rem;
+  }
+  
+  .section-title h2 {
+    font-size: 2rem;
+  }
+  
+  .gallery-title h2 {
+    font-size: 2rem;
+  }
+  
+  .gallery-slider img {
+    width: 200px;
+    height: 120px;
+  }
+}
+
+/* Utility Classes */
+.fade-in {
+  animation: fadeInUp 1s ease-out;
+}
+
+.fade-in-left {
+  animation: fadeInLeft 1s ease-out;
+}
+
+.fade-in-right {
+  animation: fadeInRight 1s ease-out;
+}
+
+.pulse-animation {
+  animation: pulse 2s infinite;
+}
+
+.float-animation {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gradient-primary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gradient-secondary);
+}
+
+/* Car Door Opening Animation Section */
+.car-door-section {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  padding: 6rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.car-door-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="stars" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="white" opacity="0.1"/><circle cx="5" cy="5" r="0.5" fill="white" opacity="0.05"/><circle cx="15" cy="15" r="0.8" fill="white" opacity="0.08"/></pattern></defs><rect width="100" height="100" fill="url(%23stars)"/></svg>');
+  animation: twinkle 4s ease-in-out infinite;
+}
+
+.car-door-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+  position: relative;
+  z-index: 2;
+}
+
+.car-door-wrapper {
+  position: relative;
+  width: 400px;
+  height: 200px;
+  perspective: 1000px;
+}
+
+.car-body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+  border-radius: 20px 20px 10px 10px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  transform-style: preserve-3d;
+  animation: carFloat 3s ease-in-out infinite;
+}
+
+.car-door {
+  position: absolute;
+  width: 80px;
+  height: 120px;
+  background: linear-gradient(135deg, #34495e 0%, #2c3e50 100%);
+  border-radius: 5px;
+  transform-origin: left center;
+  transition: transform 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.3);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.left-door {
+  left: 0;
+  top: 20px;
+  transform: rotateY(0deg);
+}
+
+.right-door {
+  right: 0;
+  top: 20px;
+  transform: rotateY(0deg);
+  transform-origin: right center;
+}
+
+.door-handle {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  width: 8px;
+  height: 20px;
+  background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  animation: handleGlow 2s ease-in-out infinite;
+}
+
+.door-window {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  height: 40px;
+  background: linear-gradient(135deg, rgba(52, 152, 219, 0.3) 0%, rgba(41, 128, 185, 0.2) 100%);
+  border-radius: 3px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+}
+
+.door-panel {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  height: 60px;
+  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+  border-radius: 3px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.car-front {
+  position: absolute;
+  left: -20px;
+  top: 30px;
+  width: 40px;
+  height: 80px;
+  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+  border-radius: 20px 5px 5px 20px;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.headlight {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: radial-gradient(circle, #f1c40f 0%, #f39c12 100%);
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(241, 196, 15, 0.8);
+  animation: headlightBlink 3s ease-in-out infinite;
+}
+
+.left-headlight {
+  top: 15px;
+  left: 5px;
+}
+
+.right-headlight {
+  top: 15px;
+  right: 5px;
+}
+
+.grille {
+  position: absolute;
+  bottom: 10px;
+  left: 5px;
+  right: 5px;
+  height: 20px;
+  background: linear-gradient(90deg, #34495e 0%, #2c3e50 50%, #34495e 100%);
+  border-radius: 2px;
+}
+
+.car-rear {
+  position: absolute;
+  right: -20px;
+  top: 30px;
+  width: 40px;
+  height: 80px;
+  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+  border-radius: 5px 20px 20px 5px;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.taillight {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: radial-gradient(circle, #e74c3c 0%, #c0392b 100%);
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgba(231, 76, 60, 0.6);
+  animation: taillightGlow 2s ease-in-out infinite;
+}
+
+.left-taillight {
+  top: 15px;
+  left: 5px;
+}
+
+.right-taillight {
+  top: 15px;
+  right: 5px;
+}
+
+.car-roof {
+  position: absolute;
+  top: 0;
+  left: 20px;
+  right: 20px;
+  height: 20px;
+  background: linear-gradient(135deg, #34495e 0%, #2c3e50 100%);
+  border-radius: 20px 20px 0 0;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.roof-rack {
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  right: 10px;
+  height: 3px;
+  background: linear-gradient(90deg, #7f8c8d 0%, #95a5a6 50%, #7f8c8d 100%);
+  border-radius: 2px;
+}
+
+.car-wheels {
+  position: absolute;
+  bottom: -15px;
+  left: 0;
+  right: 0;
+  height: 30px;
+}
+
+.wheel {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+  border-radius: 50%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  animation: wheelSpin 2s linear infinite;
+}
+
+.front-left { left: 60px; }
+.front-right { right: 60px; }
+.rear-left { left: 20px; }
+.rear-right { right: 20px; }
+
+.wheel-rim {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  right: 3px;
+  bottom: 3px;
+  background: linear-gradient(135deg, #95a5a6 0%, #7f8c8d 100%);
+  border-radius: 50%;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.wheel-spokes {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2px;
+  height: 20px;
+  background: linear-gradient(180deg, #ecf0f1 0%, #bdc3c7 100%);
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.wheel-spokes::before,
+.wheel-spokes::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2px;
+  height: 20px;
+  background: linear-gradient(180deg, #ecf0f1 0%, #bdc3c7 100%);
+  transform: translate(-50%, -50%) rotate(60deg);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.wheel-spokes::after {
+  transform: translate(-50%, -50%) rotate(120deg);
+}
+
+.car-interior {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  background: linear-gradient(135deg, #34495e 0%, #2c3e50 100%);
+  border-radius: 10px;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.interior-logo-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  animation: logoReveal 1.5s ease-in-out 1s both;
+}
+
+.interior-logo {
+  margin-bottom: 15px;
+  animation: logoFloat 2s ease-in-out infinite;
+}
+
+.interior-logo-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 3px solid rgba(241, 196, 15, 0.8);
+  box-shadow: 0 0 20px rgba(241, 196, 15, 0.5);
+  background: white;
+  padding: 5px;
+  animation: logoGlow 3s ease-in-out infinite;
+}
+
+.interior-brand-name {
+  text-align: center;
+  color: white;
+}
+
+.interior-brand-name h3 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin: 0 0 5px 0;
+  background: linear-gradient(45deg, #f1c40f, #e67e22, #f39c12);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: textGlow 3s ease-in-out infinite;
+}
+
+.interior-brand-name p {
+  font-size: 0.9rem;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.steering-wheel {
+  position: absolute;
+  left: 20px;
+  top: 30px;
+  width: 25px;
+  height: 25px;
+  background: linear-gradient(135deg, #7f8c8d 0%, #95a5a6 100%);
+  border-radius: 50%;
+  border: 2px solid #34495e;
+  animation: steeringWheel 4s ease-in-out infinite;
+}
+
+.dashboard {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  height: 15px;
+  background: linear-gradient(90deg, #2c3e50 0%, #34495e 50%, #2c3e50 100%);
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.seats {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  height: 40px;
+}
+
+.seat {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: linear-gradient(135deg, #8e44ad 0%, #9b59b6 100%);
+  border-radius: 5px;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.driver-seat {
+  left: 0;
+}
+
+.passenger-seat {
+  right: 0;
+}
+
+.car-effects {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+}
+
+.sparkle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: radial-gradient(circle, #f1c40f 0%, transparent 70%);
+  border-radius: 50%;
+  animation: sparkleFloat 2s ease-in-out infinite;
+}
+
+.sparkle-1 {
+  top: 20%;
+  left: 20%;
+  animation-delay: 0s;
+}
+
+.sparkle-2 {
+  top: 30%;
+  right: 20%;
+  animation-delay: 0.5s;
+}
+
+.sparkle-3 {
+  bottom: 30%;
+  left: 30%;
+  animation-delay: 1s;
+}
+
+.sparkle-4 {
+  bottom: 20%;
+  right: 30%;
+  animation-delay: 1.5s;
+}
+
+.light-beam {
+  position: absolute;
+  top: 50%;
+  left: -50px;
+  width: 100px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #f1c40f, transparent);
+  transform: translateY(-50%);
+  animation: lightBeam 3s ease-in-out infinite;
+  box-shadow: 0 0 20px rgba(241, 196, 15, 0.8);
+}
+
+.car-door-text {
+  flex: 1;
+  text-align: center;
+  color: white;
+  animation: fadeInRight 1s ease-out;
+}
+
+.car-door-text h2 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  background: linear-gradient(45deg, #f1c40f, #e67e22, #f39c12);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: textGlow 3s ease-in-out infinite;
+}
+
+.car-door-text p {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+}
+
+.door-open-btn {
+  background: linear-gradient(135deg, #f1c40f 0%, #e67e22 100%);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 32px rgba(241, 196, 15, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  animation: buttonPulse 2s ease-in-out infinite;
+}
+
+.door-open-btn:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 15px 40px rgba(241, 196, 15, 0.5);
+  background: linear-gradient(135deg, #e67e22 0%, #f1c40f 100%);
+}
+
+/* Door Opening Animation */
+.car-door-section.doors-open .left-door {
+  transform: rotateY(-70deg);
+  animation: doorOpenLeft 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.car-door-section.doors-open .right-door {
+  transform: rotateY(70deg);
+  animation: doorOpenRight 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.car-door-section.doors-open .car-interior {
+  opacity: 1;
+  animation: interiorReveal 1s ease-in-out 0.5s both;
+}
+
+.car-door-section.doors-open .sparkle {
+  animation: sparkleBurst 1s ease-in-out 0.8s;
+}
+
+.car-door-section.doors-open .light-beam {
+  animation: lightBeamIntense 2s ease-in-out 1s infinite;
+}
+
+/* Door Closing Animation */
+.car-door-section:not(.doors-open) .left-door {
+  transform: rotateY(0deg);
+  animation: doorCloseLeft 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.car-door-section:not(.doors-open) .right-door {
+  transform: rotateY(0deg);
+  animation: doorCloseRight 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.car-door-section:not(.doors-open) .car-interior {
+  opacity: 0;
+  animation: interiorHide 0.8s ease-in-out;
+}
+
+.car-door-section:not(.doors-open) .sparkle {
+  animation: sparkleFloat 2s ease-in-out infinite;
+}
+
+.car-door-section:not(.doors-open) .light-beam {
+  animation: lightBeam 3s ease-in-out infinite;
+}
+
+/* Button State Changes */
+.door-open-btn.doors-open {
+  background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+  animation: buttonPulseRed 2s ease-in-out infinite;
+}
+
+.door-open-btn.doors-open:hover {
+  background: linear-gradient(135deg, #c0392b 0%, #e74c3c 100%);
+  box-shadow: 0 15px 40px rgba(231, 76, 60, 0.5);
+}
+
+/* Keyframe Animations */
+@keyframes carFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+@keyframes handleGlow {
+  0%, 100% {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  }
+  50% {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3), 0 0 15px rgba(243, 156, 18, 0.6);
+  }
+}
+
+@keyframes headlightBlink {
+  0%, 90%, 100% {
+    opacity: 1;
+  }
+  95% {
+    opacity: 0.3;
+  }
+}
+
+@keyframes taillightGlow {
+  0%, 100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes wheelSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes steeringWheel {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+}
+
+@keyframes sparkleFloat {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translateY(-10px) scale(1.2);
+    opacity: 1;
+  }
+}
+
+@keyframes sparkleBurst {
+  0% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scale(2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+}
+
+@keyframes lightBeam {
+  0%, 100% {
+    opacity: 0;
+    transform: translateY(-50%) translateX(-50px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-50%) translateX(0px);
+  }
+}
+
+@keyframes lightBeamIntense {
+  0%, 100% {
+    opacity: 0.8;
+    transform: translateY(-50%) translateX(-50px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-50%) translateX(0px);
+  }
+}
+
+@keyframes textGlow {
+  0%, 100% {
+    text-shadow: 0 0 10px rgba(241, 196, 15, 0.3);
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(241, 196, 15, 0.6);
+  }
+}
+
+@keyframes buttonPulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes doorOpenLeft {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(-70deg);
+  }
+}
+
+@keyframes doorOpenRight {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(70deg);
+  }
+}
+
+@keyframes interiorReveal {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes logoReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes logoFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes logoGlow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(241, 196, 15, 0.5);
+    border-color: rgba(241, 196, 15, 0.8);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(241, 196, 15, 0.8);
+    border-color: rgba(241, 196, 15, 1);
+  }
+}
+
+@keyframes doorCloseLeft {
+  0% {
+    transform: rotateY(-70deg);
+  }
+  100% {
+    transform: rotateY(0deg);
+  }
+}
+
+@keyframes doorCloseRight {
+  0% {
+    transform: rotateY(70deg);
+  }
+  100% {
+    transform: rotateY(0deg);
+  }
+}
+
+@keyframes interiorHide {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+}
+
+@keyframes buttonPulseRed {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 8px 32px rgba(231, 76, 60, 0.3);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 12px 40px rgba(231, 76, 60, 0.5);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .car-door-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .car-door-wrapper {
+    width: 300px;
+    height: 150px;
+  }
+  
+  .car-door-text h2 {
+    font-size: 2rem;
+  }
+  
+  .car-door-text p {
+    font-size: 1.1rem;
+  }
+  
+  .door-open-btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+  
+  .interior-logo-img {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .interior-brand-name h3 {
+    font-size: 1.2rem;
+  }
+  
+  .interior-brand-name p {
+    font-size: 0.8rem;
+  }
+}
